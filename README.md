@@ -25,13 +25,16 @@ where is n is the number of robot poses, m is the number of landmarks and the su
 
 * At each time step the matrix (omega) is updated with the motion constraint equation of the robot pose and the detected landmarks, and the vector (xi) is updated with the displacement.
 
-* the estimated poses and landmarks locations ($\mu) can be calculated by:
-    $$\mu = \Omega ^{-1} *x_i$$
+* the estimated poses and landmarks locations (mu) can be calculated by:
+
+    <img src="https://render.githubusercontent.com/render/math?math=\mu = \Omega ^{-1} *x_i">
+
+
 ###### example:  
 
   ![slam](images/slam1D.PNG)
 
-  In a 1D world, the robot moves from x0 to x1 with displacement of 5. Thus there is a motion constraint that capture the relation between x0 and x1 that can be used to construct the $$\Omega$$ matrix.
+  In a 1D world, the robot moves from x0 to x1 with displacement of 5. Thus there is a motion constraint that capture the relation between x0 and x1 that can be used to construct the omega matrix.
 The matrix is up for every pose and landmark detected.
 
 ### Result:
